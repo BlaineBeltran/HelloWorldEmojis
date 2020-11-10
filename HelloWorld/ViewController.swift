@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.black
     }
     
     //@IBAction allows the code to connect with the user interface
@@ -36,6 +36,8 @@ class ViewController: UIViewController {
             let alertController = UIAlertController(title: "This emoji means...", message: meaning, preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             alertController.addAction(UIAlertAction(title: "Read More", style: UIAlertAction.Style.default, handler: nil))
+            
+            // The "present" is how to display the alert message on the screen with an animation
             present(alertController, animated: true, completion: nil)
             
         }
